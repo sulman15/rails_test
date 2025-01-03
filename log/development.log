@@ -1,0 +1,967 @@
+Started GET "/" for ::1 at 2025-01-03 11:44:55 +0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mac/.rvm/gems/ruby-3.0.7/gems/railties-7.0.8.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mac/.rvm/gems/ruby-3.0.7/gems/railties-7.0.8.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.5ms | Allocations: 939)
+Completed 200 OK in 38ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 10133)
+
+
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDummies (20250103064850)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "dummies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "txt" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20250103064850"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2025-01-03 06:48:57.648380"], ["updated_at", "2025-01-03 06:48:57.648380"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/test" for ::1 at 2025-01-03 11:51:00 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/test"):
+  
+Started GET "/test" for ::1 at 2025-01-03 11:51:27 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/test"):
+  
+Started GET "/tests" for ::1 at 2025-01-03 11:52:06 +0500
+Processing by TestsController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 5132)
+
+
+  
+NameError (uninitialized constant TestsController::Test):
+  
+app/controllers/tests_controller.rb:6:in `index'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/tests" for ::1 at 2025-01-03 11:53:33 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1863)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1947)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3365)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    3: <h1>Tests</h1>
+    4: 
+    5: <div id="tests">
+    6:   <% @tests.each do |test| %>
+    7:     <%= render test %>
+    8:     <p>
+    9:       <%= link_to "Show this test", test %>
+  
+app/views/tests/index.html.erb:6
+Started GET "/tests" for ::1 at 2025-01-03 11:54:10 +0500
+  
+SyntaxError (/Users/mac/Documents/fauree/test/my_app_name/app/controllers/tests_controller.rb:70: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/tests_controller.rb:70: syntax error, unexpected `end', expecting end-of-input
+app/controllers/tests_controller.rb:70: syntax error, unexpected `end', expecting end-of-input
+Started GET "/tests" for ::1 at 2025-01-03 11:54:20 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1583)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 1668)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2577)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    3: <h1>Tests</h1>
+    4: 
+    5: <div id="tests">
+    6:   <% @tests.each do |test| %>
+    7:     <%= render test %>
+    8:     <p>
+    9:       <%= link_to "Show this test", test %>
+  
+app/views/tests/index.html.erb:6
+Started GET "/tests" for ::1 at 2025-01-03 11:54:52 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 134)
+  Rendered layout layouts/application.html.erb (Duration: 398.8ms | Allocations: 98816)
+Completed 200 OK in 402ms (Views: 401.3ms | ActiveRecord: 0.0ms | Allocations: 100094)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 11:55:51 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 82.5ms | Allocations: 47535)
+Completed 200 OK in 85ms (Views: 84.3ms | ActiveRecord: 0.0ms | Allocations: 48798)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 11:57:26 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 481)
+  Rendered layout layouts/application.html.erb (Duration: 143.4ms | Allocations: 53570)
+Completed 200 OK in 167ms (Views: 149.4ms | ActiveRecord: 0.0ms | Allocations: 60545)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 11:58:13 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 481)
+  Rendered layout layouts/application.html.erb (Duration: 138.9ms | Allocations: 47704)
+Completed 200 OK in 163ms (Views: 145.4ms | ActiveRecord: 0.0ms | Allocations: 54680)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:00:28 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 481)
+  Rendered layout layouts/application.html.erb (Duration: 72.4ms | Allocations: 46534)
+Completed 200 OK in 84ms (Views: 75.5ms | ActiveRecord: 0.0ms | Allocations: 53510)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:01:23 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 481)
+  Rendered layout layouts/application.html.erb (Duration: 76.9ms | Allocations: 46671)
+Completed 200 OK in 90ms (Views: 80.7ms | ActiveRecord: 0.0ms | Allocations: 53647)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:03:37 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 481)
+  Rendered layout layouts/application.html.erb (Duration: 83.8ms | Allocations: 46502)
+Completed 200 OK in 107ms (Views: 90.4ms | ActiveRecord: 0.0ms | Allocations: 53478)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:11:14 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 102.3ms | Allocations: 24529)
+Completed 200 OK in 105ms (Views: 104.0ms | ActiveRecord: 0.0ms | Allocations: 25827)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:15:15 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 481)
+  Rendered layout layouts/application.html.erb (Duration: 248.9ms | Allocations: 56994)
+Completed 200 OK in 277ms (Views: 255.6ms | ActiveRecord: 0.0ms | Allocations: 63972)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:16:14 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 544)
+  Rendered layout layouts/application.html.erb (Duration: 133.8ms | Allocations: 54128)
+Completed 200 OK in 145ms (Views: 137.0ms | ActiveRecord: 0.0ms | Allocations: 61106)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:23:39 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 734)
+  Rendered layout layouts/application.html.erb (Duration: 72.1ms | Allocations: 47085)
+Completed 200 OK in 82ms (Views: 74.8ms | ActiveRecord: 0.0ms | Allocations: 54064)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:24:20 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 406)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2575)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 3873)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:24:53 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1644)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 1999)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:25:59 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 728)
+  Rendered layout layouts/application.html.erb (Duration: 78.8ms | Allocations: 47056)
+Completed 200 OK in 89ms (Views: 82.3ms | ActiveRecord: 0.0ms | Allocations: 54035)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:26:30 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 329)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2528)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 3826)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:27:00 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 651)
+  Rendered layout layouts/application.html.erb (Duration: 128.5ms | Allocations: 54581)
+Completed 200 OK in 139ms (Views: 131.3ms | ActiveRecord: 0.0ms | Allocations: 61559)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:47:45 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 657)
+  Rendered layout layouts/application.html.erb (Duration: 75.2ms | Allocations: 47252)
+Completed 200 OK in 94ms (Views: 80.2ms | ActiveRecord: 0.0ms | Allocations: 54231)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:48:59 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 657)
+  Rendered layout layouts/application.html.erb (Duration: 140.8ms | Allocations: 55903)
+Completed 200 OK in 160ms (Views: 146.3ms | ActiveRecord: 0.0ms | Allocations: 62881)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:49:31 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 657)
+  Rendered layout layouts/application.html.erb (Duration: 93.5ms | Allocations: 50008)
+Completed 200 OK in 103ms (Views: 96.0ms | ActiveRecord: 0.0ms | Allocations: 56983)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:51:17 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 667)
+  Rendered layout layouts/application.html.erb (Duration: 65.7ms | Allocations: 44124)
+Completed 200 OK in 83ms (Views: 70.7ms | ActiveRecord: 0.0ms | Allocations: 51100)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:53:37 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 653)
+  Rendered layout layouts/application.html.erb (Duration: 67.1ms | Allocations: 43927)
+Completed 200 OK in 84ms (Views: 72.5ms | ActiveRecord: 0.0ms | Allocations: 50903)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:57:02 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 659)
+  Rendered layout layouts/application.html.erb (Duration: 64.6ms | Allocations: 43920)
+Completed 200 OK in 83ms (Views: 69.2ms | ActiveRecord: 0.0ms | Allocations: 50896)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:57:54 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2499)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 3796)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:58:22 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 344)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2527)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3793)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:58:57 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 347)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2511)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 3782)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 12:59:31 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 341)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2498)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 3762)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:00:40 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 346)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2516)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 3777)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:00:59 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 343)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 2522)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms | Allocations: 3782)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:04:05 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 662)
+  Rendered layout layouts/application.html.erb (Duration: 59.2ms | Allocations: 43999)
+Completed 200 OK in 79ms (Views: 64.5ms | ActiveRecord: 0.0ms | Allocations: 50976)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:06:47 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 665)
+  Rendered layout layouts/application.html.erb (Duration: 59.0ms | Allocations: 44186)
+Completed 200 OK in 78ms (Views: 64.2ms | ActiveRecord: 0.0ms | Allocations: 51162)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:08:14 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 662)
+  Rendered layout layouts/application.html.erb (Duration: 47.8ms | Allocations: 43887)
+Completed 200 OK in 58ms (Views: 50.7ms | ActiveRecord: 0.0ms | Allocations: 50863)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:08:43 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2511)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 3808)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:11:29 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 352)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2519)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 3779)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:12:21 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 352)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 2526)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 3792)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:13:05 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 352)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 2514)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.0ms | Allocations: 3780)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:13:14 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 357)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2537)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 3801)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:13:34 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 352)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2523)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 3789)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:13:45 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 352)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2531)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 3792)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:13:53 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 352)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2513)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 3773)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:14:40 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 352)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2528)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 3788)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:15:36 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 352)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2514)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 3774)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:16:46 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 352)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2531)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3791)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:20:31 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 628)
+  Rendered layout layouts/application.html.erb (Duration: 57.6ms | Allocations: 44066)
+Completed 200 OK in 78ms (Views: 63.2ms | ActiveRecord: 0.0ms | Allocations: 51042)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:23:13 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 660)
+  Rendered layout layouts/application.html.erb (Duration: 61.5ms | Allocations: 44006)
+Completed 200 OK in 75ms (Views: 65.1ms | ActiveRecord: 0.0ms | Allocations: 50982)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:24:12 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 660)
+  Rendered layout layouts/application.html.erb (Duration: 58.9ms | Allocations: 43762)
+Completed 200 OK in 70ms (Views: 62.1ms | ActiveRecord: 0.0ms | Allocations: 50738)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:24:23 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 306)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2489)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 3786)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:24:28 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1596)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1946)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:25:31 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 674)
+  Rendered layout layouts/application.html.erb (Duration: 86.1ms | Allocations: 43908)
+Completed 200 OK in 102ms (Views: 91.4ms | ActiveRecord: 0.0ms | Allocations: 50884)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:25:35 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 1806)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms | Allocations: 2194)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:26:27 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 674)
+  Rendered layout layouts/application.html.erb (Duration: 68.6ms | Allocations: 44026)
+Completed 200 OK in 80ms (Views: 71.5ms | ActiveRecord: 0.0ms | Allocations: 51002)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 13:29:32 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 653)
+  Rendered layout layouts/application.html.erb (Duration: 76.2ms | Allocations: 44042)
+Completed 200 OK in 91ms (Views: 80.7ms | ActiveRecord: 0.0ms | Allocations: 51018)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:26:41 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 653)
+  Rendered layout layouts/application.html.erb (Duration: 75.7ms | Allocations: 43963)
+Completed 200 OK in 96ms (Views: 81.5ms | ActiveRecord: 0.0ms | Allocations: 50939)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:27:50 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 334)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2514)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 3811)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:28:15 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 337)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2514)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 3785)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:28:58 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 334)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2504)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3764)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:34:42 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 652)
+  Rendered layout layouts/application.html.erb (Duration: 72.9ms | Allocations: 44130)
+Completed 200 OK in 92ms (Views: 78.5ms | ActiveRecord: 0.0ms | Allocations: 51106)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:35:49 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 682)
+  Rendered layout layouts/application.html.erb (Duration: 60.1ms | Allocations: 43946)
+Completed 200 OK in 73ms (Views: 64.5ms | ActiveRecord: 0.0ms | Allocations: 50922)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:36:49 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 363)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2537)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3834)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:37:21 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 1612)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 1964)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:39:07 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 343)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2510)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 3755)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:39:32 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 339)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2495)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 3761)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:39:52 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 320)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2504)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 3774)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:40:07 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 316)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2480)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 3740)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:40:40 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 313)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2510)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3770)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:41:16 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 313)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2492)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 3755)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:42:27 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 324)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2503)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3763)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:45:12 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 324)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2482)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 3742)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:45:40 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 324)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2506)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 3766)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:55:25 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 680)
+  Rendered layout layouts/application.html.erb (Duration: 83.2ms | Allocations: 44183)
+Completed 200 OK in 103ms (Views: 88.6ms | ActiveRecord: 0.0ms | Allocations: 51159)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:57:43 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 365)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2527)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 3824)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:58:49 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 368)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2530)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 3796)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 14:59:57 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 368)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 2541)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 3801)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:00:12 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 368)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 2533)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 0.0ms | Allocations: 3799)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:00:41 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 371)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2541)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 3805)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:01:05 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 368)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2535)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 3795)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:08:58 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 378)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2554)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 3817)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:11:20 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 365)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2535)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 3795)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:12:08 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 369)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2560)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3820)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:14:54 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 386)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2575)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 3841)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:14:59 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1601)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1948)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:15:49 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 382)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2558)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3800)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:18:07 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 396)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2569)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3829)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:20:27 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 392)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2562)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3823)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:20:29 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1586)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1932)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:21:34 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 392)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2574)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 3816)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:22:21 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 346)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2522)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 3782)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:22:25 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1598)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1944)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:23:35 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 393)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2563)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 3805)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:24:49 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 350)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2511)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 3771)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:26:38 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1589)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1935)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:29:09 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1598)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 1926)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:32:35 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 475)
+  Rendered layout layouts/application.html.erb (Duration: 153.1ms | Allocations: 52474)
+Completed 200 OK in 172ms (Views: 158.4ms | ActiveRecord: 0.0ms | Allocations: 59449)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 15:42:51 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 1678)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 2066)
+
+
+Started GET "/tests" for ::1 at 2025-01-03 18:37:35 +0500
+Processing by TestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tests/index.html.erb within layouts/application
+  Rendered tests/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 47.0ms | Allocations: 18599)
+Completed 200 OK in 53ms (Views: 49.0ms | ActiveRecord: 0.0ms | Allocations: 18931)
+
+
