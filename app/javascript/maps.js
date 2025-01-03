@@ -93,19 +93,60 @@ document.getElementById("search-btn").addEventListener("click", async function (
     map.setView([lat, lon], 13);
     var marker = L.marker([lat, lon]).addTo(map);
     marker.bindPopup(`<b>${address}</b>`).openPopup();
-    document.getElementById("latitude").value = lat;
-    document.getElementById("longitude").value = lon;
-    document.getElementById("address").value = structuredAddress;
-    document.getElementById("country").value = country;
-    document.getElementById("state").value = province;
-    document.getElementById("postal_code").value = postalCode;
-    document.getElementById("city").value = city;
-    document.getElementById("timestamp").value = formattedTimestamp;
-
+   
   } catch (error) {
     console.error("Error:", error.message);
     alert(error.message);
   }
 });
+
+document.getElementById("current-location-btn").addEventListener("click", function () {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      async function (position) {
+        try {
+          const lat = parseFloat(position.coords.latitude);
+          const lon = parseFloat(position.coords.longitude);
+
+          if (isNaN(lat) || isNaN(lon)) {
+            alert("Invalid latitude or longitude values.");
+            return;
+          }
+
+          // Update map with current location
+          map.setView([lat, lon], 13);
+          const marker = L.marker([lat, lon]).addTo(map);
+          marker.bindPopup("Fetching address...").openPopup();
+
+          // Reverse geocode to get address
+          const result = await new Promise((resolve, reject) => {
+            return resolve(geocoder.reverse(
+              { lat: lat, lng: lon },
+              map.options.crs.scale(map.getZoom()))
+            );
+          });
+
+          console.log(result[0])
+
+          const address = result[0].name || "No address available";
+          marker.bindPopup(`<b>${address}</b>`).openPopup();
+          console.log("Address:", address);
+
+          // Optionally update form 
+        } catch (error) {
+          console.error("Error:", error.message);
+          alert("An error occurred while fetching the address.");
+        }
+      },
+      function (error) {
+        console.error("Geolocation error:", error.message);
+        alert("Unable to fetch your location. Please check your device settings.");
+      }
+    );
+  } else {
+    alert("Geolocation is not supported by your browser.");
+  }
+});
+
 });
 
