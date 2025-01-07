@@ -6,3 +6,29 @@
 </div>
 
 <button id="current-location-btn" class="btn btn-primary">Get Current Location</button>
+
+
+<div class="row">
+<div class="col-md-12 mb-3">
+  <div class="row mb-1">
+    <label for="location-input" class="col-sm-1 col-form-label">Enter Location:</label>
+    <div class="col-sm-2">
+      <input type="text" id="location-input" class="form-control" placeholder="Enter a location" />
+    </div>
+    <label for="latitude-input" class="col-sm-1 col-form-label" style="width: 5%;">Latitude:</label>
+    <div class="col-sm-2" style="width: 15%">
+      <input type="number" id="latitude-input" class="form-control" placeholder="Enter latitude" />
+    </div>
+    <label for="longitude-input" class="col-sm-1 col-form-label" style="width: 6%;">Longitude:</label>
+    <div class="col-sm-2" style="width: 15%">
+      <input type="number" id="longitude-input" class="form-control" placeholder="Enter longitude" />
+    </div>
+    <div class="col-sm-1">
+      <button id="search-btn" class="btn btn-sm g cstm-btn2-small">Search</button>
+      </div>
+      <div class="col-sm-1">
+      <button id="current-location-btn" class="btn g p-2 cstm-btn2">Get Current Location</button>
+    </div>
+  </div>
+  <div id="map" style="height: 400px;" class="mt-1"></div>
+</div>
